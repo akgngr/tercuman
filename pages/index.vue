@@ -16,7 +16,7 @@ export default {
       error: ''
     }
   },
-  async mounted() {
+  async fetch() {
     try{
       this.blogs = await this.$strapi.$blogs.find({_locale:'tr'})
     }catch(error){
