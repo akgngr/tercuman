@@ -38,6 +38,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/strapi',
+    '@nuxtjs/i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -58,5 +59,38 @@ export default {
   strapi: {
     entities: ['blogs'],
     url: "https://tercuman-api.herokuapp.com/"
-  }
+  },
+
+  //i18n settings
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'English'
+      },
+      {
+        code: 'tr',
+        name: 'Turkish'
+      },
+      {
+        code: 'de',
+        name: 'German'
+      }
+    ],
+    defaultLocale: 'tr',
+    vueI18n: {
+      fallbackLocale: 'tr',
+      messages: {
+        en: {
+          welcome: 'Welcome'
+        },
+        tr: {
+          welcome: 'Selam'
+        },
+        de: {
+          welcome: 'Bienvenido'
+        }
+      }
+    }
+  },
 }
